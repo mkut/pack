@@ -1,4 +1,5 @@
-require './modernmasters.rb'
+require './booster/MMA.rb'
+require './booster/RTR.rb'
 require './draftpacks.rb'
 
 class OptionReader
@@ -17,9 +18,12 @@ class OptionReader
 
 	def generator(key)
 		case key
-		when 'MDM'
-			MDM.new
+		when 'MMA'
+			MMA.new
+		when 'RTR'
+			RTR.new
 		else
+			puts "[WARNING]set `#{key}' is not found."
 			nil
 		end
 	end
@@ -27,7 +31,7 @@ class OptionReader
 	def run
 		if @gens.empty?
 			puts "USAGE: pack set1 set2 ... setn [options]"
-			puts "EXAMPLE: pack MDM MDM MDM --player=8"
+			puts "EXAMPLE: pack MMA MMA MMA --player=8"
 			puts "`pack help' for more informations"
 		else
 			draft = @player ? BoosterDraftPacks.new(@gens, @player) : BoosterDraftPacks.new(@gens)

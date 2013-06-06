@@ -1,6 +1,6 @@
-# [MDM] Modern Masters pack generator
+# [MMA] Modern Masters pack generator
 
-class MDM
+class MMA
 	def initialize
 		@mythic = [
 			'Elspeth, Knight Errant',
