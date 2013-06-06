@@ -30,8 +30,7 @@ class BoosterDraftMode
 	end
 
 	def run
-		draft = @player ? BoosterDraftPacks.new(@gens, @player) : BoosterDraftPacks.new(@gens)
-		p draft.generate
+		p BoosterDraftPacks.new(@gens, @player).generate
 	end
 end
 
@@ -75,8 +74,7 @@ class CubeDraftMode
 	end
 
 	def run
-		draft = @player ? CubeDraftPacks.new(@gen, @pack, @player) : CubeDraftPacks.new(@gen, @pack)
-		p draft.generate
+		p CubeDraftPacks.new(@gen, @pack, @player).generate
 	end
 end
 
