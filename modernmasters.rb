@@ -1,5 +1,6 @@
-class MDM
+# [MDM] Modern Masters pack generator
 
+class MDM
 	def initialize
 		@mythic = [
 			'Elspeth, Knight Errant',
@@ -250,20 +251,3 @@ class MDM
 		a + b + c + d
 	end
 end
-
-class MDMDraft
-	def initialize(n)
-		@generator = MDM.new
-		@num = n
-	end
-
-	def generate
-		Array(1..3).map {
-			Array(1..@num).map {
-				@generator.generate
-			}
-		}
-	end
-end
-
-p MDMDraft.new(8).generate
