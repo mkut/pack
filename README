@@ -1,0 +1,15 @@
+USAGE: pack <command> [<options>]
+EXAMPLE: pack booster MMA MMA MMA --player=8
+       : pack cube --cube=MO --player=8 --pack=3
+
+commands are:
+   booster   Booster draft mode
+   cube      Cube draft mode
+
+Booster draft mode
+   --player   Number of players (default=8)
+
+Cube draft mode
+   --cube     Specify cube card pool
+	--player   Number of players (default=8)
+	--pack     Number of packs per player (default=3)
