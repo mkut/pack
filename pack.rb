@@ -24,6 +24,8 @@ class BoosterDraftMode
 			RTR.new
 		when 'GTC'
 			GTC.new
+		when 'DGM'
+			DGM.new
 		else
 			puts "[WARNING]set `#{key}' is not found."
 			nil
