@@ -11,5 +11,5 @@ Booster draft mode
 
 Cube draft mode
    --cube     Specify cube card pool
-	--player   Number of players (default=8)
-	--pack     Number of packs per player (default=3)
+   --player   Number of players (default=8)
+   --pack     Number of packs per player (default=3)
