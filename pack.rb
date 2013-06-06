@@ -1,5 +1,6 @@
 require './booster/MMA.rb'
 require './booster/RTR.rb'
+require './booster/GTC.rb'
 require './cube/MOCube.rb'
 require './draftpacks.rb'
 
@@ -23,6 +24,8 @@ class BoosterDraftMode
 			MMA.new
 		when 'RTR'
 			RTR.new
+		when 'GTC'
+			GTC.new
 		else
 			puts "[WARNING]set `#{key}' is not found."
 			nil

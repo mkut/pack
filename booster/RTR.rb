@@ -1,8 +1,10 @@
 # [RTR] Return to Ravnica pack generator
 
-class RTR
+require './booster/default.rb'
+
+class RTR < DefaultBooster
 	def initialize
-		@mythic = [
+		mythic = [
 			'Angel of Serenity',
 			'Jace, Architect of Thought',
 			'Necropolis Regent',
@@ -19,7 +21,7 @@ class RTR
 			'Trostani, Selesnya\'s Voice',
 			'Vraska the Unseen',
 			]
-		@rare = [
+		rare = [
 			'Martial Law',
 			'Palisade Giant',
 			'Precinct Captain',
@@ -74,7 +76,7 @@ class RTR
 			'Steam Vents',
 			'Temple Garden',
 			]
-		@uncommon = [
+		uncommon = [
 			'Arrest',
 			'Azorius Justiciar',
 			'Bazaar Krovod',
@@ -156,7 +158,7 @@ class RTR
 			'Tablet of the Guilds',
 			'Rogue\'s Passage',
 			]
-		@common = [
+		common = [
 			'Armory Guard',
 			'Avenging Arrow',
 			'Azorius Arrester',
@@ -259,7 +261,7 @@ class RTR
 			'Selesnya Guildgate',
 			'Transguild Promenade',
 			]
-		@basicland = [
+		basicland = [
 			'Plains',
 			'Plains',
 			'Plains',
@@ -286,17 +288,6 @@ class RTR
 			'Forest',
 			'Forest',
 			]
-		@all = @mythic + @rare + @uncommon + @common + @basicland
-	end
-
-	def generate
-		mythic = rand(8) == 7
-		foil = rand(4) == 3
-		a = mythic ? @mythic.shuffle[0..0] : @rare.shuffle[0..0]
-		b = @uncommon.shuffle[0..2]
-		c = foil ? @common.shuffle[0..8] : @common.shuffle[0..9]
-		d = @basicland.shuffle[0..0]
-		e = foil ? @all.shuffle[0..0] : []
-		a + b + c + d + e
+		super(mythic, rare, uncommon, common, basicland)
 	end
 end
