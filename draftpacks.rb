@@ -14,3 +14,15 @@ class BoosterDraftPacks
 		}
 	end
 end
+
+class CubeDraftPacks
+	def initialize(gen, pack = 3, player = 8)
+		@generator = gen
+		@num_player = player
+		@num_pack = pack
+	end
+
+	def generate
+		@generator.generate(@num_pack * @num_player).each_slice(@num_player).to_a
+	end
+end
