@@ -19,7 +19,7 @@ end
 class CubeDraftPacks
 	def initialize(gen, pack = 3, player = 8)
 		pack = 3 if !pack
-		player = 8 if !pack
+		player = 8 if !player
 		@generator = gen
 		@num_player = player
 		@num_pack = pack
