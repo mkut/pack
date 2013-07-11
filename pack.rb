@@ -18,6 +18,8 @@ class BoosterDraftMode
 
 	def generator(key)
 		case key
+		when 'M14'
+			M14.new
 		when 'MMA'
 			MMA.new
 		when 'RTR'
@@ -95,10 +97,16 @@ class PackGenerator
 
 	def generator(key)
 		case key
+		when 'M14'
+			M14.new
 		when 'MMA'
 			MMA.new
 		when 'RTR'
 			RTR.new
+		when 'GTC'
+			GTC.new
+		when 'DGM'
+			DGM.new
 		when 'MOCube'
 			MOCube.new
 		else
