@@ -28,6 +28,8 @@ class BoosterDraftMode
 			GTC.new
 		when 'DGM'
 			DGM.new
+		when 'THS'
+			THS.new
 		else
 			puts "[WARNING]set `#{key}' is not found."
 			nil
@@ -107,6 +109,8 @@ class PackGenerator
 			GTC.new
 		when 'DGM'
 			DGM.new
+		when 'THS'
+			THS.new
 		when 'MOCube'
 			MOCube.new
 		else
