@@ -1,6 +1,6 @@
 # [GTC] Gatecrash pack generator
 
-require './booster/default'
+require './booster/default.rb'
 
 class GTC < DefaultBooster
 	def initialize
