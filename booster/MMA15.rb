@@ -1,3 +1,4 @@
+# -*- encoding: utf-8 -*-
 # [MMA15] Modern Masters 2015 Edition pack generator
 
 require './booster/default.rb'
@@ -175,7 +176,7 @@ class MMA15 < DefaultBooster
                         'Sunspear Shikari',
                         "Terashi's Grasp",
                         'Waxmane Baku',
-                        'AEthersnipe',
+                        'Æthersnipe',
                         'Cloud Elemental',
                         'Faerie Mechanist',
                         'Helium Squirter',
@@ -257,7 +258,9 @@ class MMA15 < DefaultBooster
                         'Sickleslicer',
                         'Skyreach Manta',
                         'Sphere of the Suns',
-                        "Wayfarer's Bauble"
+                        "Wayfarer's Bauble",
+                        "Darksteel Citadel",
+                        "Evolving Wilds"
 			]
 		basicland = [
 			'Plains',
