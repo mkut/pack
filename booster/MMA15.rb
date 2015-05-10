@@ -175,7 +175,7 @@ class MMA15 < DefaultBooster
                         'Sunspear Shikari',
                         "Terashi's Grasp",
                         'Waxmane Baku',
-                        'Æthersnipe',
+                        'AEthersnipe',
                         'Cloud Elemental',
                         'Faerie Mechanist',
                         'Helium Squirter',
@@ -229,7 +229,7 @@ class MMA15 < DefaultBooster
                         'Commune with Nature',
                         'Gnarlid Pack',
                         'Kavu Primarch',
-                        'Kozilek’s Predator',
+                        "Kozilek's Predator",
                         'Matca Rioters',
                         'Nest Invader',
                         'Plummet',
@@ -257,7 +257,7 @@ class MMA15 < DefaultBooster
                         'Sickleslicer',
                         'Skyreach Manta',
                         'Sphere of the Suns',
-                        'Wayfarer’s Bauble'
+                        "Wayfarer's Bauble"
 			]
 		basicland = [
 			'Plains',

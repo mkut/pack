@@ -4,4 +4,4 @@ require './booster/RTR.rb'
 require './booster/GTC.rb'
 require './booster/DGM.rb'
 require './booster/THS.rb'
-
+require './booster/MMA15.rb'
