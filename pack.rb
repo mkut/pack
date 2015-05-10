@@ -30,6 +30,8 @@ class BoosterDraftMode
 			DGM.new
 		when 'THS'
 			THS.new
+		when 'MMA15'
+			MMA15.new
 		else
 			puts "[WARNING]set `#{key}' is not found."
 			nil
