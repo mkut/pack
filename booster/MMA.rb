@@ -1,8 +1,10 @@
 # [MMA] Modern Masters pack generator
 
-class MMA
+require './booster/mma.rb'
+
+class MMA < ModernMastersBooster
 	def initialize
-		@mythic = [
+		mythic = [
 			'Elspeth, Knight Errant',
 			'Yosei, the Morning Star',
 			'Keiga, the Tide Star',
@@ -19,7 +21,7 @@ class MMA
 			'Sword of Light and Shadow',
 			'Vedalken Shackles',
 			]
-		@rare = [
+		rare = [
 			'Adarkar Valkyrie',
 			'Angel\'s Grace',
 			'Auriok Salvagers',
@@ -74,7 +76,7 @@ class MMA
 			'City of Brass',
 			'Glimmervoid',
 			]
-		@uncommon = [
+		uncommon = [
 			'Cloudgoat Ranger',
 			'Feudkiller\'s Verdict',
 			'Flickerwisp',
@@ -136,7 +138,7 @@ class MMA
 			'Vivid Marsh',
 			'Vivid Meadow',
 			]
-		@common = [
+		common = [
 			'Amrou Scout',
 			'Amrou Seekers',
 			'Avian Changeling',
@@ -239,15 +241,6 @@ class MMA
 			'Skyreach Manta',
 			'Terramorphic Expanse',
 			]
-		@all = @mythic + @rare + @uncommon + @common
-	end
-
-	def generate
-		mythic = rand(8) == 7
-		a = mythic ? @mythic.shuffle[0..0] : @rare.shuffle[0..0]
-		b = @uncommon.shuffle[0..2]
-		c = @common.shuffle[0..9]
-		d = @all.shuffle[0..0]
-		a + b + c + d
+		super(mythic, rare, uncommon, common)
 	end
 end

@@ -1,9 +1,9 @@
 # -*- encoding: utf-8 -*-
 # [MMA15] Modern Masters 2015 Edition pack generator
 
-require './booster/default.rb'
+require './booster/mma.rb'
 
-class MMA15 < DefaultBooster
+class MMA15 < ModernMastersBooster
 	def initialize
 		mythic = [
                         'Emrakul, the Aeons Torn',
@@ -262,28 +262,6 @@ class MMA15 < DefaultBooster
                         "Darksteel Citadel",
                         "Evolving Wilds"
 			]
-		basicland = [
-			'Plains',
-			'Plains',
-			'Plains',
-			'Plains',
-			'Island',
-			'Island',
-			'Island',
-			'Island',
-			'Swamp',
-			'Swamp',
-			'Swamp',
-			'Swamp',
-			'Mountain',
-			'Mountain',
-			'Mountain',
-			'Mountain',
-			'Forest',
-			'Forest',
-			'Forest',
-			'Forest',
-			]
-		super(mythic, rare, uncommon, common, basicland)
+		super(mythic, rare, uncommon, common)
 	end
 end
