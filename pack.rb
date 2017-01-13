@@ -32,6 +32,8 @@ class BoosterDraftMode
 			THS.new
 		when 'MMA15'
 			MMA15.new
+                when 'AER'
+                        AER.new
 		else
 			puts "[WARNING]set `#{key}' is not found."
 			nil
